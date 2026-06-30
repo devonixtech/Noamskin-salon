@@ -160,6 +160,7 @@ model Service {
   category         String?  @db.VarChar(100)
   image_url        String?  @db.Text
   is_active        Boolean  @default(true)
+  show_on_home     Boolean  @default(false)
   created_at       DateTime @default(now()) @db.Timestamp(0)
   updated_at       DateTime @default(now()) @updatedAt @db.Timestamp(0)
 

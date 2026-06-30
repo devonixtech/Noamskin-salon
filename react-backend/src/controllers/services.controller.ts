@@ -79,7 +79,8 @@ export class ServicesController {
           duration_minutes: data.duration_minutes,
           category: data.category,
           image_url: data.image_url || null,
-          is_active: data.is_active ?? true
+          is_active: data.is_active ?? true,
+          show_on_home: data.show_on_home ?? false
         }
       });
       res.status(201).json({ message: 'Service added successfully', service });
@@ -101,7 +102,8 @@ export class ServicesController {
           price: data.price,
           duration_minutes: data.duration_minutes,
           category: data.category,
-          is_active: data.is_active
+          is_active: data.is_active,
+          show_on_home: data.show_on_home
         }
       });
       res.json({ message: 'Service updated successfully', service });
