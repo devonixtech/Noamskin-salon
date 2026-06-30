@@ -80,7 +80,7 @@ export class ServicesController {
           category: data.category,
           image_url: data.image_url || null,
           is_active: data.is_active ?? true,
-          show_on_home: data.show_on_home ?? false
+          is_featured: data.is_featured ?? false
         }
       });
       res.status(201).json({ message: 'Service added successfully', service });
@@ -103,7 +103,7 @@ export class ServicesController {
           duration_minutes: data.duration_minutes,
           category: data.category,
           is_active: data.is_active,
-          show_on_home: data.show_on_home
+          is_featured: data.is_featured
         }
       });
       res.json({ message: 'Service updated successfully', service });
